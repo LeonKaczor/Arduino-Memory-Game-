@@ -1,4 +1,7 @@
 # Arduino Memory Game (Simon Says)
+Click here to see and hear how the game works!
+https://youtu.be/TMMk2V2ssN8?si=Wj2AJVkQ-SYWA-nD
+
 
 This project contains the Arduino code for a classic memory game, similar to "Simon Says." The game challenges the player to remember and repeat an increasingly complex sequence of lights and sounds.
 
