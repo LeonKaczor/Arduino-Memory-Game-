@@ -1,42 +1,33 @@
 # Arduino Memory Game (Simon Says)
-Click here to see and hear how the game works!
-https://youtu.be/TMMk2V2ssN8?si=Wj2AJVkQ-SYWA-nD
 
+> **Note:** This is a beginner project I built when I was first starting out with Arduino! 
 
-This project contains the Arduino code for a classic memory game, similar to "Simon Says." The game challenges the player to remember and repeat an increasingly complex sequence of lights and sounds.
+**[Click here to see and hear how the game works!](https://youtu.be/TMMk2V2ssN8?si=Wj2AJVkQ-SYWA-nD)**
+
+This project is a classic "Simon Says" memory game. The objective is to remember and repeat an increasingly complex sequence of lights and sounds.
 
 ## Features
-* **100 Levels:** The game supports up to 100 consecutive rounds.
-* **Audio-Visual Feedback:** Each button is paired with a specific LED and a unique musical tone.
-* **Serial Monitoring:** Outputs the current round, player inputs, and game status to the Serial Monitor (9600 baud).
-* **Game Over/Win Melodies:** Includes distinct audio sequences for making a mistake and for completing the game.
+* **100 Levels:** Challenge yourself with up to 100 consecutive rounds.
+* **Audio-Visual Feedback:** Every button has a paired LED and a unique musical tone.
+* **Melodies & Monitoring:** Includes win/loss sound effects and tracks your game status via the Serial Monitor (9600 baud).
 
-## Hardware Requirements
+## Hardware Needed
 * 1x Arduino Board (Uno, Nano, etc.)
-* 4x Push Buttons
-* 4x LEDs 
-* 4x Resistors for LEDs (e.g., 220Ω)
+* 4x Push Buttons & 4x LEDs (with 220Ω resistors)
 * 1x Piezo Buzzer
 
 ## Pin Configuration
 
-| Component | Arduino Pin | Notes |
+| Component | Pin | Notes |
 | :--- | :--- | :--- |
-| Button 1 | D8 | Uses `INPUT_PULLUP` (connect to GND) |
-| Button 2 | D7 | Uses `INPUT_PULLUP` (connect to GND) |
-| Button 3 | D4 | Uses `INPUT_PULLUP` (connect to GND) |
-| Button 4 | D2 | Uses `INPUT_PULLUP` (connect to GND) |
-| LED 1 | A0 | Configured as digital `OUTPUT` |
-| LED 2 | A1 | Configured as digital `OUTPUT` |
-| LED 3 | A2 | Configured as digital `OUTPUT` |
-| LED 4 | A3 | Configured as digital `OUTPUT` |
-| Buzzer | D9 | Requires a PWM-capable pin |
+| Buttons 1-4 | D8, D7, D4, D2 | Connect to GND (`INPUT_PULLUP`) |
+| LEDs 1-4 | A0, A1, A2, A3 | Standard digital `OUTPUT` |
+| Buzzer | D9 | Requires a PWM pin |
 | Status LED | D11 | Optional; stays `HIGH` during active game |
-| RNG Seed | A5 | Leave unconnected for random seed generation |
+| RNG Seed | A5 | Leave unconnected for random generation |
 
 ## How to Play
-1. **Start:** Power on or reset the Arduino. The Serial Monitor will display `--- NOWA GRA ---` (New Game).
-2. **Watch and Listen:** The Arduino will play a sequence of lights and tones.
-3. **Repeat:** Press the corresponding buttons in the exact same order.
-4. **Advance:** If you are correct, the game will move to the next round and add one more step to the sequence.
-5. **Game Over:** If you press the wrong button, the LEDs will flash, a "Game Over" melody will play, and the game will lock. Press the physical `RESET` button on the Arduino to play again.
+1. **Watch & Listen:** The Arduino plays a sequence of lights and tones.
+2. **Repeat:** Press the buttons in the exact same order. 
+3. **Advance:** Getting it right adds a new step to the sequence for the next round.
+4. **Game Over:** Pressing the wrong button triggers flashing LEDs and a loss melody. Press the physical `RESET` button on your Arduino to play again!
