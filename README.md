@@ -1,6 +1,6 @@
 # Arduino Memory Game (Simon Says)
 
-> **Note:** This is a beginner project I built when I was first starting out with Arduino! 
+> **Note:** This is a beginner project I built when I was first starting out with Arduino
 
 **[Click here to see and hear how the game works!](https://youtu.be/TMMk2V2ssN8?si=Wj2AJVkQ-SYWA-nD)**
 
